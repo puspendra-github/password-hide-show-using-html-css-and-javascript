@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="password">
+            <input type="password" placeholder="Password" id="password-input">
+            <img src="eye-close.png" id="show">
+        </div>
+    </div>
+    <script>
+        let show = document.getElementById('show');
+        let password = document.getElementById("password-input");
+        show.onclick= function(){
+            if(password.type == "password"){
+                password.type="text";
+                show.src="eye-open.png";
+                show.classList.add("eye-open");
+            }
+            else{
+                show.classList.remove("eye-open");
+            password.type = "password";
+            show.src="eye-close.png";
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
